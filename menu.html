@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Seblak Mitoha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="location.html">Lokasi</a></li>
+                <li><a href="https://wa.me/62881012897734" target="_blank">Order via WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="menu-section">
+            <div class="filter-kategori">
+                <a href="#menu-section" class="active" onclick="filterKategori('Semua', event)">Semua</a>
+                <a href="#menu-section" onclick="filterKategori('Seblak', event)">Seblak</a>
+                <a href="#menu-section" onclick="filterKategori('Cemilan', event)">Cemilan</a>
+                <a href="#menu-section" onclick="filterKategori('Minuman', event)">Minuman</a>
+            </div>
+            <div class="produk-list" id="produk-list">
+                <!-- Produk akan diisi oleh JS dari script.js -->
+            </div>
+            <div id="modal-detail" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="modal-img" src="" alt="" style="max-width:100%;border-radius:12px;">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-harga"></p>
+                    <p id="modal-deskripsi"></p>
+                    <a id="modal-order" href="#" target="_blank" class="btn-order">Order via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Seblak Mitoha. All rights reserved.</p>
+    </footer>
+    <!-- Semua logika produk dan gambar ada di script.js -->
+</body>
+</html>
